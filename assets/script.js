@@ -29,27 +29,41 @@ $.each(textArea, function() {
 var saveBtn = $(".saveBtn")
 //add an event listener for the save button
 saveBtn.on("click", function() {
-    console.log("hi")
-    var storedText = [
-    "#9",
-    "#10",
-    "#11",
-    "#12",
-    "#13",
-    "#14",
-    "#15",
-    "#16",
-    "#17"
-    ]
-    localStorage.setItem("storedText", JSON.stringify(storedText))
+//save items into local storage   
+var storedHour = $(this).siblings(".description").attr("id")
+console.log(storedHour)
+    var storedText = $(this).siblings(".description").val()
+    localStorage.setItem(storedHour, storedText)
 
 })
 
+//get items from local storage on page refresh
+//text area 9
+console.log(localStorage.getItem(9))
+var val9 = localStorage.getItem(9)
+$("#9").val(val9) 
+//text area 10, 11, 12...
+var val10 = localStorage.getItem(10)
+$("#10").val(val10) 
 
-// //when the save button is clicked, the text is stored to local storage
-// var storedText = $(this).siblings(".description").val()
-// console.log(storedText)
-// localStorage.setItem("storedText", storedText)
-// //get item from local storage when page is refreshed
-// var getText = localStorage.getItem("storedText")
-// console.log(getText)
+var val11 = localStorage.getItem(11)
+$("#11").val(val11) 
+
+var val12 = localStorage.getItem(12)
+$("#12").val(val12) 
+
+var val13 = localStorage.getItem(13)
+$("#13").val(val13) 
+
+var val14 = localStorage.getItem(14)
+$("#14").val(val14) 
+
+var val15 = localStorage.getItem(15)
+$("#15").val(val15) 
+
+var val16 = localStorage.getItem(16)
+$("#16").val(val16) 
+
+var val17 = localStorage.getItem(17)
+$("#17").val(val17) 
+
