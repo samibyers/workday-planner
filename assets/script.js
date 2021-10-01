@@ -23,7 +23,6 @@ $.each(textArea, function() {
         $("#" + this.id).addClass("future")
     }
 })
-//create an array so you can save multiple items into local storage
 
 //add variable for the save button
 var saveBtn = $(".saveBtn")
@@ -34,7 +33,6 @@ var storedHour = $(this).siblings(".description").attr("id")
 console.log(storedHour)
     var storedText = $(this).siblings(".description").val()
     localStorage.setItem(storedHour, storedText)
-
 })
 
 //get items from local storage on page refresh
