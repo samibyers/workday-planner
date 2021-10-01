@@ -1,3 +1,5 @@
+
+
 //display the current day at the top of the page
 var currentDay = moment().format("dddd[,] MMMM Do");
 $("#currentDay").text(currentDay);
@@ -33,7 +35,5 @@ localStorage.setItem("storedText", storedText)
 })
 
 //get item from local storage when page is refreshed
-
-var storedText = localStorage.getItem("storedText")
-
-storedText.val(localstorage.getItem("storedText"))
+var getText = localStorage.getItem("storedText")
+console.log(getText)
