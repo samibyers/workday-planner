@@ -23,17 +23,33 @@ $.each(textArea, function() {
         $("#" + this.id).addClass("future")
     }
 })
+//create an array so you can save multiple items into local storage
 
 //add variable for the save button
 var saveBtn = $(".saveBtn")
 //add an event listener for the save button
 saveBtn.on("click", function() {
     console.log("hi")
-//when the save button is clicked, the text is stored to local storage
-var storedText = $(this).siblings(".description").val()
-localStorage.setItem("storedText", storedText)
+    var storedText = [
+    "#9",
+    "#10",
+    "#11",
+    "#12",
+    "#13",
+    "#14",
+    "#15",
+    "#16",
+    "#17"
+    ]
+    localStorage.setItem("storedText", JSON.stringify(storedText))
+
 })
 
-//get item from local storage when page is refreshed
-var getText = localStorage.getItem("storedText")
-console.log(getText)
+
+// //when the save button is clicked, the text is stored to local storage
+// var storedText = $(this).siblings(".description").val()
+// console.log(storedText)
+// localStorage.setItem("storedText", storedText)
+// //get item from local storage when page is refreshed
+// var getText = localStorage.getItem("storedText")
+// console.log(getText)
